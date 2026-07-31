@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "cookies": {
+    "version": "tough-cookie@6.0.0",
+    "storeType": "Yt",
+    "rejectPublicSuffixes": true,
+    "enableLooseMode": false,
+    "allowSpecialUseDomain": true,
+    "prefixSecurity": "silent",
+    "cookies": [
+      {
+        "key": "JSESSIONID",
+        "value": "ECA75216EEB7A6B67DD7812F999DFA80",
+        "domain": "localhost",
+        "path": "/",
+        "httpOnly": true,
+        "hostOnly": true,
+        "creation": "2026-07-31T05:29:00.063Z",
+        "lastAccessed": "2026-07-31T07:42:10.650Z"
+      },
+      {
+        "key": "_gh_sess",
+        "value": "QQXfIMqudaMgzuUPMd%2F8U%2Fl3Xp6uOyKKY%2BtgESAj%2BgjWINpmlf5n%2FKv3B2rYxQUa4gZFXMyrH8Qg%2FplIjJ6GjFW4%2F%2BhHy4Bq65rnDjIGjeyTguembsjKcTVZ7nQ2e9NJnx%2FS1mQILxFTYEBR6FnLs0irxixAm%2FTQH0wpKn0PENL%2BC5UdWiNZn4O%2FWZxlksyCZ40o0jPv2D2HKdaa0OukqJwiifsmCEvPoYlVKZPc06GbwTaYEql8E%2F9%2Brs8QewUCJSP1xF9fsDAZ4TeR1I0HLA%3D%3D--Hb6HtkZvaXRB1J%2BY--Hkm1uLN7rp9DSQBAPIkd1A%3D%3D",
+        "domain": "localhost",
+        "path": "/",
+        "secure": true,
+        "httpOnly": true,
+        "hostOnly": true,
+        "creation": "2026-07-31T05:35:59.811Z",
+        "lastAccessed": "2026-07-31T07:42:10.516Z",
+        "sameSite": "lax"
+      }
+    ]
+  }
+}

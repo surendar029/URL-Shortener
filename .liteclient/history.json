@@ -1,0 +1,780 @@
+[
+  {
+    "id": "cc929250-387c-41cf-89c8-2f32c9501730",
+    "timestamp": 1785483777879,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8ih71mm6c39"
+    },
+    "request": {
+      "name": "Analytics",
+      "method": "GET",
+      "url": "http://localhost:8080/api/v1/urls/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "basic",
+        "basic": {
+          "username": "user",
+          "password": "3e500a5e-baed-4539-8913-a5c4e864437c"
+        }
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 362
+    }
+  },
+  {
+    "id": "2f5d395d-fd3f-4ac0-b7fd-31f72f8fa98a",
+    "timestamp": 1785483730659,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8ih71mm6c39"
+    },
+    "request": {
+      "name": "Analytics",
+      "method": "GET",
+      "url": "http://localhost:8080/api/v1/urls/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "401 ",
+      "durationMs": 133
+    }
+  },
+  {
+    "id": "974b29e3-8327-4649-b3e1-6557f83ca15c",
+    "timestamp": 1785483725994,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "http://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 OK",
+      "durationMs": 2571
+    }
+  },
+  {
+    "id": "a6610962-e6c0-4016-9f52-936caed5642c",
+    "timestamp": 1785476302416,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8ih71mm6c39"
+    },
+    "request": {
+      "name": "localhost/api/v1/urls/EhD72Z",
+      "method": "GET",
+      "url": "http://localhost:8080/api/v1/urls/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 12
+    }
+  },
+  {
+    "id": "23f12965-6ccb-44e8-9fc4-1462bc08a685",
+    "timestamp": 1785476201822,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "http://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 OK",
+      "durationMs": 305
+    }
+  },
+  {
+    "id": "34c3258e-5a5f-453b-b082-6ffe1382beaa",
+    "timestamp": 1785476109306,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "https://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "5bb301ae-190f-4580-a6ed-8d72b8ebafc4",
+    "timestamp": 1785476086972,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "https://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "1b7a11ae-72f0-45af-bde7-60df19866d6d",
+    "timestamp": 1785476062020,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "https://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "04fbe587-25e3-4783-ae02-20a6b2efd71a",
+    "timestamp": 1785476061238,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "https://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "fba0877f-c53d-4285-905d-10b23e6b1cd4",
+    "timestamp": 1785476050535,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "https://localhost:8080/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "47acef2a-b5fc-4388-a6f4-2c42ce790f33",
+    "timestamp": 1785476027809,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "https://liteclient.com/EhD72Z",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 OK",
+      "durationMs": 631
+    }
+  },
+  {
+    "id": "b0397350-0475-479b-a9f0-968128a6f8e1",
+    "timestamp": 1785476004045,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "201 ",
+      "durationMs": 718
+    }
+  },
+  {
+    "id": "cd93ae26-8634-4cc3-b433-0ea691d7b20e",
+    "timestamp": 1785475998559,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "d22223e9-29b4-4a37-8520-5a12cbea6a30",
+    "timestamp": 1785475870244,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 181
+    }
+  },
+  {
+    "id": "20c13677-3fb8-4e6c-bee3-f8175aa2f78d",
+    "timestamp": 1785475846144,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 6
+    }
+  },
+  {
+    "id": "aa1e1d99-e5e0-4f4f-91a6-cdce5b18a0b0",
+    "timestamp": 1785475835347,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 6
+    }
+  },
+  {
+    "id": "48ec009a-f7e8-4663-8e96-d975e1892aa7",
+    "timestamp": 1785475835119,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 5
+    }
+  },
+  {
+    "id": "a0a1c5ea-e46d-4ac9-9511-70aff6f39520",
+    "timestamp": 1785475834929,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 6
+    }
+  },
+  {
+    "id": "87af7a4c-f7ab-4af9-8799-37ebd6424ee7",
+    "timestamp": 1785475834718,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 5
+    }
+  },
+  {
+    "id": "d37946b0-23dc-4226-aeb0-429b67d65014",
+    "timestamp": 1785475834521,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 6
+    }
+  },
+  {
+    "id": "89cc882f-92ad-43d5-992b-3ffe643da940",
+    "timestamp": 1785475834319,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 5
+    }
+  },
+  {
+    "id": "3b80dab7-25db-4188-bf05-2ec6bb3c9923",
+    "timestamp": 1785475833510,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 9
+    }
+  },
+  {
+    "id": "3ce8478c-2c88-4dcb-8ad5-af78af70aa51",
+    "timestamp": 1785475740066,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 47
+    }
+  },
+  {
+    "id": "0f684b9b-f928-4607-be5c-2365814cf089",
+    "timestamp": 1785475715784,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "localhost/hgjhk",
+      "method": "GET",
+      "url": "http://localhost:8080/hgjhk",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "404 ",
+      "durationMs": 957
+    }
+  },
+  {
+    "id": "88c3ac73-02c4-4336-9660-fcc3d9d4df29",
+    "timestamp": 1785475609079,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i2btyrpxyu"
+    },
+    "request": {
+      "name": "localhost/hello",
+      "method": "GET",
+      "url": "http://localhost:8080/hello",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 135
+    }
+  },
+  {
+    "id": "2e90d0a1-a855-4e90-b7fa-01bb7c17287f",
+    "timestamp": 1785420337597,
+    "source": {
+      "type": "scratch"
+    },
+    "request": {
+      "name": "localhost/actuator/health",
+      "method": "GET",
+      "url": "http://localhost:8080/actuator/health",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 25
+    }
+  },
+  {
+    "id": "bad5a702-6ce6-49cc-bdaa-a9d5cff5d183",
+    "timestamp": 1785420303892,
+    "source": {
+      "type": "scratch"
+    },
+    "request": {
+      "name": "localhost/actuator/health",
+      "method": "GET",
+      "url": "http://localhost:8080/actuator/health",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 1586
+    }
+  },
+  {
+    "id": "77cdefc0-7a0f-4798-a152-bc7ae1030ed8",
+    "timestamp": 1785420293277,
+    "source": {
+      "type": "scratch"
+    },
+    "request": {
+      "name": "localhost/actuator/health",
+      "method": "GET",
+      "url": "http://localhost:8080/actuator/health",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  }
+]

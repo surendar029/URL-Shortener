@@ -1,0 +1,70 @@
+[
+  {
+    "id": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+    "name": "UrlShortener",
+    "variables": [],
+    "items": [
+      {
+        "id": "ms8i2btyrpxyu",
+        "name": "Hello",
+        "method": "GET",
+        "url": "https://liteclient.com/hello",
+        "headers": {},
+        "body": {
+          "mode": "none"
+        },
+        "type": "request"
+      },
+      {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/urls",
+        "headers": {},
+        "body": {
+          "mode": "raw",
+          "rawType": "json",
+          "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+        },
+        "auth": {
+          "type": "none"
+        },
+        "preRequestScript": "",
+        "postResponseScript": "",
+        "type": "request",
+        "id": "ms8i3j5t7vjg3",
+        "name": "ShortenURL"
+      },
+      {
+        "method": "GET",
+        "url": "http://localhost:8080/EhD72Z",
+        "headers": {},
+        "body": {
+          "mode": "none"
+        },
+        "auth": {
+          "type": "none"
+        },
+        "preRequestScript": "",
+        "postResponseScript": "",
+        "type": "request",
+        "id": "ms8i4xnhl33l7",
+        "name": "Redirect"
+      },
+      {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/urls/EhD72Z",
+        "headers": {},
+        "body": {
+          "mode": "none"
+        },
+        "auth": {
+          "type": "none"
+        },
+        "preRequestScript": "",
+        "postResponseScript": "",
+        "type": "request",
+        "id": "ms8ih71mm6c39",
+        "name": "Analytics"
+      }
+    ]
+  }
+]
