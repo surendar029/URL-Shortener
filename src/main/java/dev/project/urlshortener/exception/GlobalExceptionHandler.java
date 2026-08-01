@@ -80,4 +80,16 @@ public class GlobalExceptionHandler {
                 request.getRequestURI());
         return ResponseEntity.status(status).body(error);
     }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleUserNotFoundException(UserNotFoundException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.NOT_FOUND;
+        ErrorResponse error = new ErrorResponse(
+                LocalDateTime.now(),
+                status.value(),
+                status.name(),
+                e.getMessage(),
+                request.getRequestURI());
+        return ResponseEntity.status(status).body(error);
+    }
 }

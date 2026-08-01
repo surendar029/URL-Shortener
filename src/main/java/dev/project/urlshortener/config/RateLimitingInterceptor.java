@@ -37,7 +37,7 @@ public class RateLimitingInterceptor implements HandlerInterceptor {
             return true;
         } else {
             long waitForRefill = TimeUnit.NANOSECONDS.toSeconds(probe.getNanosToWaitForRefill());
-            response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value()); // HTTP 429
+            response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
             response.addHeader("X-Rate-Limit-Retry-After-Seconds", String.valueOf(waitForRefill));
             response.setContentType("application/json");
             response.getWriter().write("""
@@ -56,6 +56,6 @@ public class RateLimitingInterceptor implements HandlerInterceptor {
         if (xfHeader == null || xfHeader.isEmpty()) {
             return request.getRemoteAddr();
         }
-        return xfHeader.split("")[0].trim();
+        return xfHeader.split(",")[0].trim();
     }
 }

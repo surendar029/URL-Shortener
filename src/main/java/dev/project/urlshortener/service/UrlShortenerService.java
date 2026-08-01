@@ -7,38 +7,48 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import dev.project.urlshortener.dto.ShortenRequest;
 import dev.project.urlshortener.dto.UrlAnalyticsResponse;
 import dev.project.urlshortener.entity.UrlMapping;
+import dev.project.urlshortener.entity.UserEntity;
 import dev.project.urlshortener.exception.CustomAliasAlreadyExistsException;
 import dev.project.urlshortener.exception.UrlExpiredException;
 import dev.project.urlshortener.exception.UrlNotFoundException;
+import dev.project.urlshortener.exception.UserNotFoundException;
 import dev.project.urlshortener.repository.UrlMappingRepository;
+import dev.project.urlshortener.repository.UserRepository;
 
 @Service
 public class UrlShortenerService {
 
     private final UrlMappingRepository urlMappingRepository;
+    private final UserRepository userRepository;
     private static final Logger log = LoggerFactory.getLogger(UrlShortenerService.class);
     private static final String CHARACTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private static final int CODE_LENGTH = 6;
     private static Random random = new Random();
 
-    public UrlShortenerService(UrlMappingRepository urlMappingRepository) {
+    public UrlShortenerService(UrlMappingRepository urlMappingRepository, UserRepository userRepository) {
         this.urlMappingRepository = urlMappingRepository;
+        this.userRepository = userRepository;
     }
 
     public String shortenUrl(ShortenRequest request) {
         log.info(request.longUrl());
 
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        UserEntity user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new UserNotFoundException("User not found"));
         String shortCode = determineShortCode(request.customAlias());
         UrlMapping urlMapping = new UrlMapping();
         urlMapping.setLongUrl(request.longUrl());
         urlMapping.setShortCode(shortCode);
         urlMapping.setExpiryDate(LocalDateTime.now().plusHours(6));
+        urlMapping.setUser(user);
         log.info("Successfully created short code: {} for URL: {}", shortCode, request.longUrl());
         urlMappingRepository.save(urlMapping);
 
@@ -66,12 +76,11 @@ public class UrlShortenerService {
         return urlMapping.getLongUrl();
     }
 
-
-    @CacheEvict(value="urls",key="#shortCode")
-    public void deleteUrl(String shortCode){
-        UrlMapping urlMapping=urlMappingRepository
-        .findByShortCode(shortCode)
-        .orElseThrow(()-> new UrlNotFoundException("ShortURL not found"));
+    @CacheEvict(value = "urls", key = "#shortCode")
+    public void deleteUrl(String shortCode) {
+        UrlMapping urlMapping = urlMappingRepository
+                .findByShortCode(shortCode)
+                .orElseThrow(() -> new UrlNotFoundException("ShortURL not found"));
 
         urlMappingRepository.delete(urlMapping);
         log.info("Successfully deleted short code: {}", shortCode);

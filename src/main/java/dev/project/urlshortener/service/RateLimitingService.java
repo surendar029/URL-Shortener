@@ -15,7 +15,7 @@ public class RateLimitingService {
 
     private Bucket createNewBucket(String key) {
         Bandwidth limit = Bandwidth.builder()
-                .capacity(10)
+                .capacity(2)
                 .refillIntervally(10, Duration.ofMinutes(1))
                 .build();
 

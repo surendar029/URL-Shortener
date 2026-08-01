@@ -22,7 +22,7 @@ public class UserService {
     private final JwtUtil jwtUtil;
 
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder,
-            AuthenticationManager authenticationManager, JwtUtil jwtUtil) {
+                       AuthenticationManager authenticationManager, JwtUtil jwtUtil) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authenticationManager = authenticationManager;
@@ -30,6 +30,7 @@ public class UserService {
     }
 
     public String registerUser(RegisterRequest request) {
+
         if (userRepository.existsByUsername(request.username()))
             throw new UserAlreadyExistsException("Username '" + request.username() + "' is already taken");
         if (userRepository.existsByEmail(request.email()))
