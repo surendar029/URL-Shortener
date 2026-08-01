@@ -243,7 +243,7 @@ Deployable production-ready application.
 - [x] URL Expiration
 - [ ] QR Code Generation
 - [x] Analytics API
-- [ ] Rate Limiting
+- [x] Rate Limiting
 - [ ] Unit Tests
 - [ ] Integration Tests
 
@@ -318,7 +318,8 @@ Next:
 - Add DELETE API (DELETE /api/v1/urls/{shortCode} & @CacheEvict handling) ✅
 - Add Basic Auth & User Registration (Spring Security, BCrypt, UserEntity, CustomUserDetailsService) ✅
 - Add JWT Stateless Authentication (Token generation, JwtAuthenticationFilter, Login API) ✅
-- Add Rate Limiting & Unit/Integration Tests
+- Add Rate Limiting (Bucket4j 10 req/min, HandlerInterceptor, HTTP 429 Too Many Requests) ✅
+- Add Unit & Integration Tests
 
 ---
 
