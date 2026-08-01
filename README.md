@@ -1,5 +1,6 @@
 # URL Shortener
 
+<<<<<<< HEAD
 [![Java](https://img.shields.io/badge/Java-17-orange?style=flat-square&logo=openjdk)](https://openjdk.org/projects/jdk/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=flat-square&logo=springboot)](https://spring.io/projects/spring-boot)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue?style=flat-square&logo=postgresql)](https://www.postgresql.org/)
@@ -10,6 +11,10 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
 
 A production-ready URL Shortener REST API built with Java 17 and Spring Boot 3. Features stateless JWT authentication, Redis caching, Bucket4j rate limiting, click analytics, URL expiration, and Docker orchestration.
+=======
+> A **high-performance, production-ready URL Shortener REST API** built with Java 17 and Spring Boot 3.  
+> Implements stateless JWT authentication, Redis caching with sub-millisecond redirect latency, API rate limiting, click analytics, URL expiration, and multi-container Docker orchestration.
+>>>>>>> ab4e9b320c0a8044c8b6b96ef518d45455b21107
 
 ---
 
