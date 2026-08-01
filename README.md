@@ -1,4 +1,4 @@
-# URL Shortener
+# URL Shortener Microservice
 
 [![Java](https://img.shields.io/badge/Java-17-orange?style=flat-square&logo=openjdk)](https://openjdk.org/projects/jdk/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=flat-square&logo=springboot)](https://spring.io/projects/spring-boot)
@@ -8,66 +8,95 @@
 [![JWT](https://img.shields.io/badge/JWT-Auth-000000?style=flat-square&logo=jsonwebtokens)](https://jwt.io/)
 [![Swagger](https://img.shields.io/badge/Swagger-OpenAPI%203-85EA2D?style=flat-square&logo=swagger)](https://swagger.io/)
 
-A production-ready URL Shortener REST API built with Java 17 and Spring Boot 3. Features stateless JWT authentication, Redis caching, Bucket4j rate limiting, click analytics, URL expiration, and Docker orchestration.
+A high-throughput, production-ready URL Shortener RESTful microservice engineered with Java 17, Spring Boot 3, and Spring Security 6. Designed with a cache-aside architecture using Redis for low-latency HTTP redirects, distributed rate limiting via Bucket4j, stateless JWT authentication, and containerized deployment with Docker Compose.
 
 ---
 
-## Tech Stack
+## Technical Highlights & Architecture
 
-| Category | Technology |
-|---|---|
-| Language | Java 17 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6, JWT (JJWT 0.12.5), BCrypt |
-| Persistence | Spring Data JPA, Hibernate, PostgreSQL 16 |
-| Caching | Redis, Spring Cache (`@Cacheable`, `@CacheEvict`) |
-| Rate Limiting | Bucket4j 8.10.1 (Token Bucket Algorithm) |
-| Build Tool | Maven |
-| Containerization | Docker, Docker Compose |
-| API Docs | SpringDoc OpenAPI 3 / Swagger UI |
-| Monitoring | Spring Boot Actuator |
+- **Low-Latency Redirection (Cache-Aside Pattern)**: Integrated Spring Cache with Redis (`@Cacheable` / `@CacheEvict`) on URL resolution paths to deliver sub-millisecond HTTP 302 redirects and bypass relational database bottlenecks.
+- **Stateless Authentication & Authorization**: Implemented Spring Security 6 filter chain with custom `OncePerRequestFilter` (`JwtAuthenticationFilter`), BCrypt password encoding, and role-based access control (`ROLE_USER`, `ROLE_ADMIN`).
+- **Resilience & Rate Limiting**: Built custom Spring MVC interceptor (`RateLimitingInterceptor`) leveraging Bucket4j token bucket algorithm for IP-based rate limiting (10 req/min), protecting against DDoS and automated scraping with HTTP 429 responses and retry headers.
+- **Relational Domain Modeling**: Established bidirectional JPA relationships (`@ManyToOne` on `UrlMapping` and `@OneToMany` on `UserEntity`) with cascade lifecycle management and foreign key integrity.
+- **Lifecycle & Expiration Management**: Automatic 6-hour URL expiration window with explicit HTTP 410 (`Gone`) handling, custom alias collision resolution, and click analytics tracking.
+- **Global Error Handling**: Standardized exception handling via `@RestControllerAdvice` converting domain-specific exceptions to RFC-7807 compliant error responses.
 
 ---
 
-## Features
+## Tech Stack & Tooling
 
-- JWT stateless authentication with BCrypt password hashing
-- User registration and role-based access control (`ROLE_USER`, `ROLE_ADMIN`)
-- URL shortening with unique 6-character alphanumeric short codes
-- Custom alias support for personalized short links
-- URL expiration after 6 hours with `410 Gone` response
-- Click analytics — tracks click count, creation time, and expiry
-- Redis caching with `@Cacheable` on redirects and `@CacheEvict` on deletion
-- API rate limiting — 10 requests per minute per IP using Bucket4j Token Bucket
-- URL ownership via `@ManyToOne` / `@OneToMany` JPA relationship
-- Centralized exception handling via `@RestControllerAdvice`
+| Component | Technology | Version | Engineering Rationale |
+|---|---|---|---|
+| Language | Java | 17 | LTS release utilizing sealed classes, records, and enhanced pattern matching |
+| Framework | Spring Boot | 3.x | Core application framework and dependency injection container |
+| Security | Spring Security / JJWT | 6.x / 0.12.5 | Stateless JWT authentication filter chain and BCrypt hashing |
+| Data Store | PostgreSQL | 16 | ACID-compliant relational persistence for user and mapping metadata |
+| Cache Engine | Redis | 7.x | In-memory key-value store for high-frequency short code resolution |
+| Rate Limiter | Bucket4j | 8.10.1 | In-memory token-bucket algorithm for request throttling |
+| Containerization | Docker / Docker Compose | Latest | Multi-container orchestration for microservice dependencies |
+| API Specification | SpringDoc OpenAPI | 3.x | Automated Swagger UI interactive documentation generation |
+| Metrics | Spring Boot Actuator | 3.x | Application readiness, liveness, and telemetry endpoints |
 
 ---
 
-## API Endpoints
+## System Architecture Flow
 
-| Method | Endpoint | Auth | Request Body | Response |
+```
+                                  +---------------------------------+
+                                  |     Client Request (HTTP/S)     |
+                                  +---------------------------------+
+                                                   |
+                                                   v
+                                  +---------------------------------+
+                                  |   JwtAuthenticationFilter       |
+                                  |   (Spring Security Context)     |
+                                  +---------------------------------+
+                                                   |
+                                                   v
+                                  +---------------------------------+
+                                  |   RateLimitingInterceptor       |
+                                  |   (Bucket4j IP Throttling)      |
+                                  +---------------------------------+
+                                                   |
+                                         +---------+---------+
+                                         |                   |
+                                (Read / Redirect)     (Write / Analytics)
+                                         |                   |
+                                         v                   v
+                               +------------------+ +------------------+
+                               |   Redis Cache    | |  PostgreSQL DB   |
+                               | (Sub-ms Lookup)  | |  (JPA / Hibernate|
+                               +------------------+ +------------------+
+```
+
+---
+
+## API Reference
+
+### Endpoints Specification
+
+| Method | Endpoint | Authorization | Request Body | Success Response |
 |---|---|---|---|---|
-| `POST` | `/api/v1/auth/register` | None | `{ "username", "email", "password" }` | `201` — "User registered successfully" |
-| `POST` | `/api/v1/auth/login` | None | `{ "username", "password" }` | `200` — JWT token string |
-| `POST` | `/api/v1/urls` | Bearer | `{ "longUrl", "customAlias?" }` | `201` — `{ "shortUrl", "longUrl" }` |
-| `GET` | `/api/v1/urls/{shortCode}` | Bearer | — | `200` — `{ "shortCode", "longUrl", "clickCount", "createdAt", "expiryDate" }` |
-| `DELETE` | `/api/v1/urls/{shortCode}` | Bearer | — | `204` — No Content |
-| `GET` | `/{shortCode}` | None | — | `302` — Redirect to original URL |
-| `GET` | `/swagger-ui.html` | None | — | Interactive API documentation |
-| `GET` | `/actuator/health` | None | — | Application health status |
+| `POST` | `/api/v1/auth/register` | Public | `{ "username": "...", "email": "...", "password": "..." }` | `201 Created` |
+| `POST` | `/api/v1/auth/login` | Public | `{ "username": "...", "password": "..." }` | `200 OK` (JWT String) |
+| `POST` | `/api/v1/urls` | Bearer Token | `{ "longUrl": "...", "customAlias": "..." }` | `201 Created` |
+| `GET` | `/api/v1/urls/{shortCode}` | Bearer Token | None | `200 OK` (Analytics JSON) |
+| `DELETE` | `/api/v1/urls/{shortCode}` | Bearer Token | None | `204 No Content` |
+| `GET` | `/{shortCode}` | Public | None | `302 Found` (Location Header) |
+| `GET` | `/swagger-ui.html` | Public | None | `200 OK` (Swagger UI) |
+| `GET` | `/actuator/health` | Public | None | `200 OK` (Health Status) |
 
-### HTTP Status Codes
+### Standard HTTP Status Mapping
 
-| Status | Meaning |
-|---|---|
-| `201 Created` | Resource created successfully |
-| `302 Found` | Redirect to original URL |
-| `400 Bad Request` | Validation error |
-| `401 Unauthorized` | Missing or invalid JWT token |
-| `404 Not Found` | Short code does not exist |
-| `409 Conflict` | Custom alias or username already taken |
-| `410 Gone` | Short link has expired |
-| `429 Too Many Requests` | Rate limit exceeded (10 req/min per IP) |
+| HTTP Code | Description | Trigger Condition |
+|---|---|---|
+| `201 Created` | Created | Resource successfully created (User / Short URL) |
+| `302 Found` | Found / Redirect | Valid short code resolved; `Location` header populated |
+| `400 Bad Request` | Bad Request | DTO bean validation failure (`@Valid`) |
+| `401 Unauthorized` | Unauthorized | Missing, malformed, or expired JWT Bearer token |
+| `404 Not Found` | Not Found | Target short code or user principal does not exist |
+| `409 Conflict` | Conflict | Username, email, or custom short code alias already taken |
+| `410 Gone` | Gone | Short link expiry timestamp has elapsed (> 6 hours) |
+| `429 Too Many Requests` | Rate Limited | Request rate exceeds token bucket capacity (10 req/min) |
 
 ---
