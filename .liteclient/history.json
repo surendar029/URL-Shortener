@@ -1,5 +1,577 @@
 [
   {
+    "id": "09f7733b-71dc-4532-bc20-325ea16e2fa2",
+    "timestamp": 1785571916005,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": {
+          "token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJoYXJpcyIsImldCI6MTc4NTU3MTI1OSwiZXhwIjoxNzg1NjU3NjU5fQ.Lt_EJ57t_rK6QLnKnKtQwJ8ze9hvqlQw_YD_4c59ASAAgLfNREIP7EPOMUluVmiG"
+        }
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "0e403656-6772-4bce-8896-7e2b3552fa31",
+    "timestamp": 1785571289969,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "bearer",
+        "bearer": {
+          "token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJoYXJpcyIsImlhdCI6MTc4NTU3MTI1OSwiZXhwIjoxNzg1NjU3NjU5fQ.Lt_EJ57t_rK6QLnKnKtQwJ8ze9hvqlQw_YD_4c59ASAAgLfNREIP7EPOMUluVmiG"
+        }
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "201 ",
+      "durationMs": 626
+    }
+  },
+  {
+    "id": "944a486c-17b2-4a2d-b856-8dd7ebfc5c87",
+    "timestamp": 1785571274583,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "403 ",
+      "durationMs": 258
+    }
+  },
+  {
+    "id": "3f1ba594-11de-4dea-acad-0d31599133d8",
+    "timestamp": 1785571260156,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9rljsd81ilt"
+    },
+    "request": {
+      "name": "Login",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/auth/login",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"username\": \"haris\",\n  \"password\": \"password\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 2730
+    }
+  },
+  {
+    "id": "6481f5a4-433b-404c-98f0-fc54b75892ad",
+    "timestamp": 1785552107676,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9rljsd81ilt"
+    },
+    "request": {
+      "name": "localhost/api/v1/auth/login",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/auth/login",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"username\": \"haris\",\n  \"password\": \"password\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 744
+    }
+  },
+  {
+    "id": "86e883e1-feed-4f30-b390-8590c125aa5e",
+    "timestamp": 1785513068197,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "Register",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/auth/register",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"username\": \"haris\",\n  \"email\": \"haris@example.com\",\n  \"password\": \"password\"\n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "409 ",
+      "durationMs": 21
+    }
+  },
+  {
+    "id": "8d3a088f-9b11-4c93-8c42-8a758f668421",
+    "timestamp": 1785513038397,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/api/v1/auth/register",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/auth/register",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"username\": \"haris\",\n  \"email\": \"haris@example.com\",\n  \"password\": \"password\"\n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "409 ",
+      "durationMs": 23
+    }
+  },
+  {
+    "id": "7a660252-f80f-48f4-973f-717c43c123ba",
+    "timestamp": 1785513017318,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost//api/v1/auth/register",
+      "method": "POST",
+      "url": "http://localhost:8080//api/v1/auth/register",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"username\": \"haris\",\n  \"email\": \"haris@example.com\",\n  \"password\": \"password\"\n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "400 ",
+      "durationMs": 22
+    }
+  },
+  {
+    "id": "3fd1a36a-9cff-4051-8665-675e02b7fded",
+    "timestamp": 1785512939346,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8ih71mm6c39"
+    },
+    "request": {
+      "name": "Analytics",
+      "method": "GET",
+      "url": "http://localhost:8080/api/v1/urls/oP584R",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "401 ",
+      "durationMs": 13
+    }
+  },
+  {
+    "id": "5df6edc4-a865-467b-b592-41e302c23ef9",
+    "timestamp": 1785512929602,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i4xnhl33l7"
+    },
+    "request": {
+      "name": "Redirect",
+      "method": "GET",
+      "url": "http://localhost:8080/oP584R",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 OK",
+      "durationMs": 568
+    }
+  },
+  {
+    "id": "f62341d3-8d89-4995-b6c0-0688fd6e3811",
+    "timestamp": 1785512914784,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "basic",
+        "basic": {
+          "username": "haris",
+          "password": "password"
+        }
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "201 ",
+      "durationMs": 402
+    }
+  },
+  {
+    "id": "354ccdbe-71b5-4d51-90b5-eedbe9f01ad2",
+    "timestamp": 1785512886734,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms8i3j5t7vjg3"
+    },
+    "request": {
+      "name": "ShortenURL",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/urls",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"longUrl\":\"https://github.com\"\n}"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "401 ",
+      "durationMs": 122
+    }
+  },
+  {
+    "id": "513a6085-34f6-45fa-a564-788ff117fa00",
+    "timestamp": 1785512860840,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/api/v1/auth/register",
+      "method": "POST",
+      "url": "http://localhost:8080/api/v1/auth/register",
+      "headers": {},
+      "body": {
+        "mode": "raw",
+        "rawType": "json",
+        "value": "{\n  \"username\": \"haris\",\n  \"email\": \"haris@example.com\",\n  \"password\": \"password\"\n}\n"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "201 ",
+      "durationMs": 440
+    }
+  },
+  {
+    "id": "2a88a22c-0f55-41d1-8f9f-68f29346f6b8",
+    "timestamp": 1785512818666,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/hello",
+      "method": "GET",
+      "url": "http://localhost:8080/hello",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "200 ",
+      "durationMs": 15
+    }
+  },
+  {
+    "id": "e63eda16-bb0d-4161-b2ee-5e405202ea90",
+    "timestamp": 1785512796226,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/hi",
+      "method": "GET",
+      "url": "http://localhost:8080/hi",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "404 ",
+      "durationMs": 2050
+    }
+  },
+  {
+    "id": "a75d15b5-2b25-4699-b597-7667e5fc4163",
+    "timestamp": 1785512709227,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/hi",
+      "method": "GET",
+      "url": "https://localhost:8080/hi",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "388d27d9-e22c-446a-9d49-d45c6f2425c9",
+    "timestamp": 1785512611709,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/hi",
+      "method": "GET",
+      "url": "https://localhost:8080/hi",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "e0e80705-de80-47b7-87a0-b90a2e9b8bef",
+    "timestamp": 1785512547054,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost/hi",
+      "method": "GET",
+      "url": "https://localhost:8080/hi",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "31687b41-9fc1-47a6-9643-1169533ee4bc",
+    "timestamp": 1785512542225,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost",
+      "method": "GET",
+      "url": "https://localhost:8080",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
+    "id": "23438caa-6416-47ff-9015-8d0efa601000",
+    "timestamp": 1785512518816,
+    "source": {
+      "type": "collection",
+      "collectionId": "ce2da03e-815a-483e-bced-a229eca1ccd3",
+      "requestId": "ms9410og32cue"
+    },
+    "request": {
+      "name": "localhost",
+      "method": "POST",
+      "url": "https://localhost:8080",
+      "headers": {},
+      "body": {
+        "mode": "none"
+      },
+      "auth": {
+        "type": "none"
+      },
+      "preRequestScript": "",
+      "postResponseScript": ""
+    },
+    "result": {
+      "status": "Network Error",
+      "durationMs": 0
+    }
+  },
+  {
     "id": "cc929250-387c-41cf-89c8-2f32c9501730",
     "timestamp": 1785483777879,
     "source": {

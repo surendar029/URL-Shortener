@@ -237,7 +237,8 @@ Deployable production-ready application.
 
 ### Features
 
-- [ ] User Authentication (JWT)
+- [x] Basic Auth & User Registration
+- [x] User Authentication (JWT)
 - [x] Custom Alias
 - [x] URL Expiration
 - [ ] QR Code Generation
@@ -315,7 +316,8 @@ Next:
 - Create Analytics API (GET /api/v1/urls/{shortCode} returning click count & metadata) ✅
 - Add Custom Short Code Alias feature (customAlias support & 409 CONFLICT handling) ✅
 - Add DELETE API (DELETE /api/v1/urls/{shortCode} & @CacheEvict handling) ✅
-- Add User Authentication (JWT) & URL Ownership
+- Add Basic Auth & User Registration (Spring Security, BCrypt, UserEntity, CustomUserDetailsService) ✅
+- Add JWT Stateless Authentication (Token generation, JwtAuthenticationFilter, Login API) ✅
 - Add Rate Limiting & Unit/Integration Tests
 
 ---

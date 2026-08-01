@@ -67,4 +67,17 @@ public class GlobalExceptionHandler {
                 request.getRequestURI());
         return ResponseEntity.status(status).body(error);
     }
+
+
+    @ExceptionHandler(UserAlreadyExistsException.class)
+    public ResponseEntity<ErrorResponse> handleUserAlreadyExistsException(UserAlreadyExistsException e, HttpServletRequest request) {
+        HttpStatus status = HttpStatus.CONFLICT;
+        ErrorResponse error = new ErrorResponse(
+                LocalDateTime.now(),
+                status.value(),
+                status.name(),
+                e.getMessage(),
+                request.getRequestURI());
+        return ResponseEntity.status(status).body(error);
+    }
 }
