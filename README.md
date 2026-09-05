@@ -26,7 +26,7 @@ Engineered with performance and resilience at its core, it leverages **Redis cac
 
 ---
 ## Category 
-- High-Performance Backend
+- SHigh-Performance Backend
 ---
 
 ## Quick Start
