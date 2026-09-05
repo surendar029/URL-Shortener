@@ -1,6 +1,6 @@
 # URL Shortener Service
 
-Description
+## Description
 
 A production-ready, high-throughput URL shortening and redirection platform built with **Java 17** and **Spring Boot 3**. The system converts long target URLs into compact, shareable short links with support for custom vanity aliases and configurable TTL expirations. 
 
