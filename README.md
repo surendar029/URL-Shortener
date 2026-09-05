@@ -21,7 +21,7 @@ Engineered with performance and resilience at its core, it leverages **Redis cac
 ## Tech Stack
 
 - **Framework**: Java 17, Spring Boot 3, Spring Security, Spring Data JPA.
-- **Database & Cache**: PostgreSQL / MySQL, Redis
+- **Database & Cache**: PostgreSQL, MySQL, Redis
 - **Libraries**: Bucket4j, JJWT, Lombok
 - **DevOps & Tools**: Docker, Docker Compose, Maven
 
