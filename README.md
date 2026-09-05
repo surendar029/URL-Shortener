@@ -3,7 +3,6 @@
 ## Description
 
 A production-ready, high-throughput URL shortening and redirection platform built with **Java 17** and **Spring Boot 3**. The system converts long target URLs into compact, shareable short links with support for custom vanity aliases and configurable TTL expirations. 
-
 Engineered with performance and resilience at its core, it leverages **Redis caching** to ensure sub-millisecond redirection lookups, **Bucket4j** token-bucket interceptors to enforce rate limiting (`429 Too Many Requests`), and automated expiration handling (`410 Gone`). Security is managed via stateless **JWT authentication** and **BCrypt** hashing, establishing clear `@ManyToOne` user-link ownership.
 
 
