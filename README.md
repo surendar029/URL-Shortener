@@ -24,6 +24,10 @@ Engineered with performance and resilience at its core, it leverages **Redis cac
 - **Libraries**: Bucket4j, JJWT, Lombok
 - **DevOps & Tools**: Docker, Docker Compose, Maven
 
+---
+## Category 
+- High-Performance Backend
+---
 
 ## Quick Start
 
